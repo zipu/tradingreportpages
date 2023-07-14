@@ -1,0 +1,1 @@
+var product_data={'symbol': 'NK', 'name': 'CME Nikkei 225', 'chartdata': {}}

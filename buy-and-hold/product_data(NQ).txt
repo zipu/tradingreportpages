@@ -1,0 +1,1 @@
+var product_data={'symbol': 'NQ', 'name': 'CME NASDAQ 100 Index Mini', 'chartdata': {}}

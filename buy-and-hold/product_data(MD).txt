@@ -1,0 +1,1 @@
+var product_data={'symbol': 'MD', 'name': 'CME S&P 400 Midcap Index', 'chartdata': {}}

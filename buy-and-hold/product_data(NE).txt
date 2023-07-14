@@ -1,0 +1,1 @@
+var product_data={'symbol': 'NE', 'name': 'CME New Zealand Dollar NZD', 'chartdata': {}}

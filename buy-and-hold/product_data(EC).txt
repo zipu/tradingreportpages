@@ -1,0 +1,1 @@
+var product_data={'symbol': 'EC', 'name': 'CME Euro FX', 'chartdata': {}}

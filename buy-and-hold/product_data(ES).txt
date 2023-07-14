@@ -1,0 +1,1 @@
+var product_data={'symbol': 'ES', 'name': 'CME S&P 500 Index E-Mini', 'chartdata': {}}
