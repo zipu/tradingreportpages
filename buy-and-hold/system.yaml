@@ -1,0 +1,54 @@
+#시스템 명
+name: Buy and Hold
+description: |
+  첫 거래일 진입 후 마지막 거래일 청산
+
+#거래시장 정보
+sectors: ~ #['currency','grain']
+instruments: ~ #['NQ','W','C','AD','ES','CL']
+from_date: '1990-01-01'
+to_date:  '2022-05-04'
+
+
+# 투자 원금
+principal: 300000 # 단위(dollar)
+
+
+# 리스크 설정
+heat_system: DefaultHeat
+max_system_heat: 1 #최대 허용 손실 비율
+max_sector_heat: 1
+max_trade_heat: 1 #매매당 최대 허용 손실 비율
+max_lots: 1 #매매당 최대 계약수
+
+#매매환경
+commission: 2.99 #수수료(dollar)
+skid: 5 # entry price = open + (high-open)*skid for buy order
+
+#(아직 구현 안됨)
+allow_pyramiding: False
+
+#지표
+metrics: 
+ # - [name, metric, params]
+ - [bydate, ByDate, start='1990-01-01', end='2022-04-30']
+ #- [uptrend20, TRENDAGE, direction='up', period=20, threshold=0.5]
+ #- [pd, PD, percentile=10, tau=10]
+ - [nostop, NeverStop]
+
+entry_rule: 
+ long:  bydate==1
+ short: ~
+
+exit_rule: 
+ long: bydate==-1
+ short: ~
+
+stop_rule: 
+ long: nostop
+ short: ~
+ 
+
+
+
+
